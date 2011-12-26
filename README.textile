@@ -1,0 +1,15 @@
+h1. Colored Polygon
+
+h2. Introduction
+
+The purpose of this project is to develop an app which facilitates implementing the Pomodoro Technique. This isn't very specific but it'll suffice for now.
+
+At this moment, the code you see in this repository just draws a timer using CoreGraphics.
+
+h2. Tips
+
+* Sound 14071__adcbicycle__18 was downloaded from "freesound.org":http://www.freesound.org/people/adcbicycle/sounds/14071/ 
+
+h2. License
+
+It is free software, and may be redistributed under the terms specified in the MIT-LICENSE file
