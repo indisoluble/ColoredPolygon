@@ -1,0 +1,307 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FF2377B214A5F51200388145 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF2377B114A5F51200388145 /* AudioToolbox.framework */; };
+		FF2377B614A5F7CB00388145 /* 14071__adcbicycle__18.caf in Resources */ = {isa = PBXBuildFile; fileRef = FF2377B314A5F7CB00388145 /* 14071__adcbicycle__18.caf */; };
+		FF4F953314A7CA62000B366C /* CPPolygonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF4F953114A7CA62000B366C /* CPPolygonViewController.m */; };
+		FF4F953414A7CA62000B366C /* CPPolygonViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF4F953214A7CA62000B366C /* CPPolygonViewController.xib */; };
+		FFCAFB4214A7345400A736CB /* CPPolygonControl.m in Sources */ = {isa = PBXBuildFile; fileRef = FFCAFB4114A7345400A736CB /* CPPolygonControl.m */; };
+		FFDD2A64149960F900A556A8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFDD2A63149960F900A556A8 /* UIKit.framework */; };
+		FFDD2A66149960F900A556A8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFDD2A65149960F900A556A8 /* Foundation.framework */; };
+		FFDD2A68149960F900A556A8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFDD2A67149960F900A556A8 /* CoreGraphics.framework */; };
+		FFDD2A6E149960F900A556A8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FFDD2A6C149960F900A556A8 /* InfoPlist.strings */; };
+		FFDD2A70149960F900A556A8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FFDD2A6F149960F900A556A8 /* main.m */; };
+		FFDD2A74149960F900A556A8 /* CPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FFDD2A73149960F900A556A8 /* CPAppDelegate.m */; };
+		FFE5942814A6B2D700A99000 /* CPCreatePolygonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFE5942614A6B2D600A99000 /* CPCreatePolygonViewController.m */; };
+		FFE5942914A6B2D700A99000 /* CPCreatePolygonViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFE5942714A6B2D700A99000 /* CPCreatePolygonViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		FF2377B114A5F51200388145 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		FF2377B314A5F7CB00388145 /* 14071__adcbicycle__18.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = 14071__adcbicycle__18.caf; sourceTree = "<group>"; };
+		FF4F953014A7CA62000B366C /* CPPolygonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPPolygonViewController.h; sourceTree = "<group>"; };
+		FF4F953114A7CA62000B366C /* CPPolygonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPPolygonViewController.m; sourceTree = "<group>"; };
+		FF4F953214A7CA62000B366C /* CPPolygonViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CPPolygonViewController.xib; sourceTree = "<group>"; };
+		FFCAFB4014A7345400A736CB /* CPPolygonControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPPolygonControl.h; sourceTree = "<group>"; };
+		FFCAFB4114A7345400A736CB /* CPPolygonControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPPolygonControl.m; sourceTree = "<group>"; };
+		FFDD2A5F149960F900A556A8 /* ColoredPolygon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ColoredPolygon.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FFDD2A63149960F900A556A8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		FFDD2A65149960F900A556A8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		FFDD2A67149960F900A556A8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		FFDD2A6B149960F900A556A8 /* ColoredPolygon-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ColoredPolygon-Info.plist"; sourceTree = "<group>"; };
+		FFDD2A6D149960F900A556A8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		FFDD2A6F149960F900A556A8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FFDD2A71149960F900A556A8 /* ColoredPolygon-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ColoredPolygon-Prefix.pch"; sourceTree = "<group>"; };
+		FFDD2A72149960F900A556A8 /* CPAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CPAppDelegate.h; sourceTree = "<group>"; };
+		FFDD2A73149960F900A556A8 /* CPAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CPAppDelegate.m; sourceTree = "<group>"; };
+		FFE5942514A6B2D600A99000 /* CPCreatePolygonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPCreatePolygonViewController.h; sourceTree = "<group>"; };
+		FFE5942614A6B2D600A99000 /* CPCreatePolygonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPCreatePolygonViewController.m; sourceTree = "<group>"; };
+		FFE5942714A6B2D700A99000 /* CPCreatePolygonViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CPCreatePolygonViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FFDD2A5C149960F900A556A8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF2377B214A5F51200388145 /* AudioToolbox.framework in Frameworks */,
+				FFDD2A68149960F900A556A8 /* CoreGraphics.framework in Frameworks */,
+				FFDD2A66149960F900A556A8 /* Foundation.framework in Frameworks */,
+				FFDD2A64149960F900A556A8 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FF2377A914A5EE4400388145 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				FF2377B314A5F7CB00388145 /* 14071__adcbicycle__18.caf */,
+			);
+			name = Sounds;
+			sourceTree = "<group>";
+		};
+		FFDD2A54149960F900A556A8 = {
+			isa = PBXGroup;
+			children = (
+				FFDD2A69149960F900A556A8 /* ColoredPolygon */,
+				FFDD2A62149960F900A556A8 /* Frameworks */,
+				FFDD2A60149960F900A556A8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FFDD2A60149960F900A556A8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FFDD2A5F149960F900A556A8 /* ColoredPolygon.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FFDD2A62149960F900A556A8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FF2377B114A5F51200388145 /* AudioToolbox.framework */,
+				FFDD2A67149960F900A556A8 /* CoreGraphics.framework */,
+				FFDD2A65149960F900A556A8 /* Foundation.framework */,
+				FFDD2A63149960F900A556A8 /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FFDD2A69149960F900A556A8 /* ColoredPolygon */ = {
+			isa = PBXGroup;
+			children = (
+				FFDD2A6A149960F900A556A8 /* Supporting Files */,
+				FFDD2A72149960F900A556A8 /* CPAppDelegate.h */,
+				FFDD2A73149960F900A556A8 /* CPAppDelegate.m */,
+				FFE5942514A6B2D600A99000 /* CPCreatePolygonViewController.h */,
+				FFE5942614A6B2D600A99000 /* CPCreatePolygonViewController.m */,
+				FFE5942714A6B2D700A99000 /* CPCreatePolygonViewController.xib */,
+				FFCAFB4014A7345400A736CB /* CPPolygonControl.h */,
+				FFCAFB4114A7345400A736CB /* CPPolygonControl.m */,
+				FF4F953014A7CA62000B366C /* CPPolygonViewController.h */,
+				FF4F953114A7CA62000B366C /* CPPolygonViewController.m */,
+				FF4F953214A7CA62000B366C /* CPPolygonViewController.xib */,
+			);
+			path = ColoredPolygon;
+			sourceTree = "<group>";
+		};
+		FFDD2A6A149960F900A556A8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FF2377A914A5EE4400388145 /* Sounds */,
+				FFDD2A6B149960F900A556A8 /* ColoredPolygon-Info.plist */,
+				FFDD2A6C149960F900A556A8 /* InfoPlist.strings */,
+				FFDD2A6F149960F900A556A8 /* main.m */,
+				FFDD2A71149960F900A556A8 /* ColoredPolygon-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FFDD2A5E149960F900A556A8 /* ColoredPolygon */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FFDD2A77149960F900A556A8 /* Build configuration list for PBXNativeTarget "ColoredPolygon" */;
+			buildPhases = (
+				FFDD2A5B149960F900A556A8 /* Sources */,
+				FFDD2A5C149960F900A556A8 /* Frameworks */,
+				FFDD2A5D149960F900A556A8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ColoredPolygon;
+			productName = ColoredPolygon;
+			productReference = FFDD2A5F149960F900A556A8 /* ColoredPolygon.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FFDD2A56149960F900A556A8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+				ORGANIZATIONNAME = "Enrique de la Torre";
+			};
+			buildConfigurationList = FFDD2A59149960F900A556A8 /* Build configuration list for PBXProject "ColoredPolygon" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = FFDD2A54149960F900A556A8;
+			productRefGroup = FFDD2A60149960F900A556A8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FFDD2A5E149960F900A556A8 /* ColoredPolygon */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FFDD2A5D149960F900A556A8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FFDD2A6E149960F900A556A8 /* InfoPlist.strings in Resources */,
+				FF2377B614A5F7CB00388145 /* 14071__adcbicycle__18.caf in Resources */,
+				FFE5942914A6B2D700A99000 /* CPCreatePolygonViewController.xib in Resources */,
+				FF4F953414A7CA62000B366C /* CPPolygonViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FFDD2A5B149960F900A556A8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FFDD2A70149960F900A556A8 /* main.m in Sources */,
+				FFDD2A74149960F900A556A8 /* CPAppDelegate.m in Sources */,
+				FFE5942814A6B2D700A99000 /* CPCreatePolygonViewController.m in Sources */,
+				FFCAFB4214A7345400A736CB /* CPPolygonControl.m in Sources */,
+				FF4F953314A7CA62000B366C /* CPPolygonViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		FFDD2A6C149960F900A556A8 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FFDD2A6D149960F900A556A8 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FFDD2A75149960F900A556A8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		FFDD2A76149960F900A556A8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FFDD2A78149960F900A556A8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ColoredPolygon/ColoredPolygon-Prefix.pch";
+				INFOPLIST_FILE = "ColoredPolygon/ColoredPolygon-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		FFDD2A79149960F900A556A8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ColoredPolygon/ColoredPolygon-Prefix.pch";
+				INFOPLIST_FILE = "ColoredPolygon/ColoredPolygon-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FFDD2A59149960F900A556A8 /* Build configuration list for PBXProject "ColoredPolygon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FFDD2A75149960F900A556A8 /* Debug */,
+				FFDD2A76149960F900A556A8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FFDD2A77149960F900A556A8 /* Build configuration list for PBXNativeTarget "ColoredPolygon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FFDD2A78149960F900A556A8 /* Debug */,
+				FFDD2A79149960F900A556A8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FFDD2A56149960F900A556A8 /* Project object */;
+}
