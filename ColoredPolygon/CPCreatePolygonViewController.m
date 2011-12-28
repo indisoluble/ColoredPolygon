@@ -15,7 +15,12 @@
 {
     UITextField *__nameText;
     UITextField *__cyclesText;
+    UITextField *__minutesText;
+    
+    CPPolygonViewController *__polygonViewController;
 }
+
+@property (nonatomic, retain) CPPolygonViewController *polygonViewController;
 
 @end
 
@@ -25,13 +30,17 @@
 #pragma mark - Synthesize properties
 @synthesize nameText = __nameText;
 @synthesize cyclesText = __cyclesText;
+@synthesize minutesText = __minutesText;
+
+@synthesize polygonViewController = __polygonViewController;
 
 #pragma mark - Init object
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
+    if (self)
+    {
+        self.polygonViewController = nil;
     }
     return self;
 }
@@ -43,6 +52,13 @@
     [super didReceiveMemoryWarning];
     
     // Release any cached data, images, etc that aren't in use.
+}
+
+- (void)dealloc
+{
+    self.polygonViewController = nil;
+    
+    [super dealloc];
 }
 
 #pragma mark - View lifecycle
@@ -77,13 +93,15 @@
 - (IBAction)start
 {
     NSUInteger numberOfCycles = (NSUInteger)[self.cyclesText.text integerValue];
+    NSUInteger minutesPerCycle = (NSUInteger)[self.minutesText.text integerValue];
     
     if (([self.nameText.text length] <= 0) ||
-        (numberOfCycles <= 0))
+        (numberOfCycles <= 0) ||
+        (minutesPerCycle <= 0))
     {
         UIAlertView *alert =
             [[[UIAlertView alloc] initWithTitle:@"Complete fields"
-                                        message:@"Write a name and a number of cycles greater than 0"
+                                        message:@"Write a name and a number of cycles and minutes per cycle greater than 0"
                                        delegate:nil
                               cancelButtonTitle:@"Continue"
                               otherButtonTitles:nil] autorelease];
@@ -92,16 +110,25 @@
         return;
     }
     
-    CPPolygonViewController *polygonViewController =
+    self.polygonViewController =
         [[[CPPolygonViewController alloc] initWithNumberOfCycles:numberOfCycles
+                                                 MinutesPerCycle:minutesPerCycle
                                                          NibName:@"CPPolygonViewController"
                                                           bundle:nil] autorelease];
-    polygonViewController.title = self.nameText.text;
+    self.polygonViewController.title = self.nameText.text;
     
-    [self.navigationController pushViewController:polygonViewController animated:YES];
+    [self.navigationController pushViewController:self.polygonViewController animated:YES];
     
     self.nameText.text = @"";
     self.cyclesText.text = @"";
+    self.minutesText.text = @"";
+}
+- (void)stop
+{
+    if (self.polygonViewController)
+    {
+        [self.polygonViewController stop];
+    }
 }
 
 @end

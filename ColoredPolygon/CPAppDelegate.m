@@ -15,9 +15,11 @@
 @interface CPAppDelegate ()
 {
     UINavigationController *__navController;
+    CPCreatePolygonViewController *__createPolygonViewController;
 }
 
 @property (nonatomic, retain) UINavigationController *navController;
+@property (nonatomic, retain) CPCreatePolygonViewController *createPolygonViewController;
 
 @end
 
@@ -27,11 +29,14 @@
 
 #pragma mark - Synthesized properties
 @synthesize window = _window;
+
 @synthesize navController = __navController;
+@synthesize createPolygonViewController = __createPolygonViewController;
 
 #pragma mark - Memory management
 - (void)dealloc
 {
+    self.createPolygonViewController = nil;
     self.navController = nil;
     
     [_window release];
@@ -44,11 +49,11 @@
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     
     self.navController = [[[UINavigationController alloc] init] autorelease];
-    CPCreatePolygonViewController *createPolygonViewController =
+    self.createPolygonViewController =
         [[[CPCreatePolygonViewController alloc]
           initWithNibName:@"CPCreatePolygonViewController" bundle:nil] autorelease];
-    createPolygonViewController.title = @"Create polygon";
-    [self.navController pushViewController:createPolygonViewController animated:NO];
+    self.createPolygonViewController.title = @"Create polygon";
+    [self.navController pushViewController:self.createPolygonViewController animated:NO];
     
     [self.window addSubview:self.navController.view];
     
@@ -63,6 +68,8 @@
      Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
      Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
      */
+    
+    [self.createPolygonViewController stop];
 }
 
 - (void)applicationDidEnterBackground:(UIApplication *)application

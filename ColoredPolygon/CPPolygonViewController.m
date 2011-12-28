@@ -9,8 +9,6 @@
 #import "CPPolygonViewController.h"
 
 
-#define CPPOLYGONVIEWCONTROLLER__MINUTESPERCYCLE 25
-
 #define CPPOLYGONVIEWCONTROLLER__ASTITLE_CONTINUE "Continue"
 #define CPPOLYGONVIEWCONTROLLER__ASTITLE_INTERNAL "Internal"
 #define CPPOLYGONVIEWCONTROLLER__ASTITLE_EXTERNAL "External"
@@ -26,24 +24,28 @@
     UILabel *__externalInterruptionLabel;
     UILabel *__internalInterruptionLabel;
     
-    NSUInteger __numberOfCycles;
+    UIActionSheet *__asInterruptionType;
+    BOOL __interruptionAnimationShowed;
+    
     BOOL __started;
     BOOL __finished;
     
-    UIActionSheet *__asInterruptionType;
+    NSUInteger __numberOfCycles;
+    NSUInteger __minutesPerCycle;
     NSUInteger __externalInterruptionValue;
     NSUInteger __internalInterruptionValue;
-    BOOL __interruptionAnimationShowed;
 }
 
-@property (nonatomic, assign) NSUInteger numberOfCycles;
+@property (nonatomic, retain) UIActionSheet *asInterruptionType;
+@property (nonatomic, assign) BOOL interruptionAnimationShowed;
+
 @property (nonatomic, assign) BOOL started;
 @property (nonatomic, assign) BOOL finished;
 
-@property (nonatomic, retain) UIActionSheet *asInterruptionType;
+@property (nonatomic, assign) NSUInteger numberOfCycles;
+@property (nonatomic, assign) NSUInteger minutesPerCycle;
 @property (nonatomic, assign) NSUInteger externalInterruptionValue;
 @property (nonatomic, assign) NSUInteger internalInterruptionValue;
-@property (nonatomic, assign) BOOL interruptionAnimationShowed;
 
 - (void)askKindOfInterruption;
 - (void)showInterruptionsValue;
@@ -62,35 +64,38 @@
 @synthesize externalInterruptionLabel = __externalInterruptionLabel;
 @synthesize internalInterruptionLabel = __internalInterruptionLabel;
 
-@synthesize numberOfCycles = __numberOfCycles;
+@synthesize asInterruptionType = __asInterruptionType;
+@synthesize interruptionAnimationShowed = __interruptionAnimationShowed;
+
 @synthesize started = __started;
 @synthesize finished = __finished;
 
-@synthesize asInterruptionType = __asInterruptionType;
+@synthesize numberOfCycles = __numberOfCycles;
+@synthesize minutesPerCycle = __minutesPerCycle;
 @synthesize externalInterruptionValue = __externalInterruptionValue;
 @synthesize internalInterruptionValue = __internalInterruptionValue;
-@synthesize interruptionAnimationShowed = __interruptionAnimationShowed;
+
 
 #pragma mark - Init object
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
-    return [self initWithNumberOfCycles:1 NibName:nibNameOrNil bundle:nibBundleOrNil];
+    return [self initWithNumberOfCycles:1 MinutesPerCycle:1 NibName:nibNameOrNil bundle:nibBundleOrNil];
 }
 
 - (id)initWithNumberOfCycles:(NSUInteger)numberOfCycles
+             MinutesPerCycle:(NSUInteger)minutesPerCycle
                      NibName:(NSString *)nibNameOrNil
                       bundle:(NSBundle *)nibBundleOrNil;
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self)
     {
-        self.numberOfCycles = numberOfCycles;
-        self.started = NO;
-        self.finished = NO;
+        self.interruptionAnimationShowed = NO;
         
+        self.numberOfCycles = numberOfCycles;
+        self.minutesPerCycle = minutesPerCycle;
         self.externalInterruptionValue = 0;
         self.internalInterruptionValue = 0;
-        self.interruptionAnimationShowed = NO;
     }
     return self;    
 }
@@ -106,9 +111,9 @@
 
 - (void)dealloc
 {
-    self.polygonControl = nil;
-    
     self.cyclesToEndLabel = nil;
+    
+    self.polygonControl = nil;
     
     self.interruptionsView = nil;
     self.externalInterruptionLabel = nil;
@@ -127,7 +132,9 @@
     // Do any additional setup after loading the view from its nib.
     self.polygonControl.delegate = self;
     [self.polygonControl createPolygonWithCycles:self.numberOfCycles
-                                 minutesPerCycle:CPPOLYGONVIEWCONTROLLER__MINUTESPERCYCLE];
+                                 minutesPerCycle:self.minutesPerCycle];
+    self.started = NO;
+    self.finished = NO;
 }
 
 - (void)viewDidUnload
@@ -145,7 +152,10 @@
 
 - (void)viewDidDisappear:(BOOL)animated
 {
+    self.finished = YES;
+    self.started = NO;
     [self.polygonControl stopPolygon];
+    self.polygonControl.delegate = nil;
 }
 
 #pragma mark - CPPolygonControlProtocol methods
@@ -156,6 +166,7 @@
 
 - (void)done
 {
+    self.started = NO;
     self.finished = YES;
 }
 
@@ -194,15 +205,24 @@
     {
         if (self.started)
         {
-            [self.polygonControl stopPolygon];
-            [self askKindOfInterruption];
+            [self stop];
         }
         else
         {
             [self.polygonControl startPolygon];
+            self.started = YES;
         }
+    }
+}
+
+- (void)stop
+{
+    if (!self.finished && self.started)
+    {
+        [self.polygonControl stopPolygon];
+        self.started = NO;
         
-        self.started = !self.started;        
+        [self askKindOfInterruption];
     }
 }
 

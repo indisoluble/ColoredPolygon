@@ -12,7 +12,9 @@
 
 @property (nonatomic, retain) IBOutlet UITextField *nameText;
 @property (nonatomic, retain) IBOutlet UITextField *cyclesText;
+@property (nonatomic, retain) IBOutlet UITextField *minutesText;
 
 - (IBAction)start;
+- (void)stop;
 
 @end

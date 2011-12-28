@@ -21,9 +21,11 @@
 @property (nonatomic, retain) IBOutlet UILabel *internalInterruptionLabel;
 
 - (id)initWithNumberOfCycles:(NSUInteger)numberOfCycles
+             MinutesPerCycle:(NSUInteger)minutesPerCycle
                      NibName:(NSString *)nibNameOrNil
                       bundle:(NSBundle *)nibBundleOrNil;
 
 - (IBAction)pressed;
+- (void)stop;
 
 @end
